@@ -1,5 +1,9 @@
 # Wealth AI Dashboard
 
+###  Live Demo  
+Explore the interactive wealth management dashboard here:  
+--> **https://wealth-ai-dashboard.streamlit.app/**
+
 A lightweight, professional portfolio analytics dashboard designed for a private banking context.  
 It combines synthetic wealth management data, multilingual UI, dynamic filtering, and interactive charts.
 
@@ -86,19 +90,21 @@ streamlit run app.py  # to run the app
 
 ##  Future Enhancements
 
-The codebase is structured to easily support additional modules:
+The codebase is structured to easily support additional modules.  
+Some items are already implemented and others are planned:
 
-- AI-based portfolio insights using LLMs
+### ✅ Already implemented
+- AI-generated portfolio insights based on filtered data (LLM-powered)
+- Multilingual UI (EN, DE, FR, IT, ES)
+- Client segmentation, filtering, and distribution analysis
 
-- Portfolio anomaly detection
+### 🔜 Planned enhancements
+- Portfolio anomaly detection (deviations, outliers, concentration risks)
+- Advisor performance analysis (AUM, contribution, client profiles)
+- Portfolio optimization heuristics (risk/return balancing)
+- SQL integration and ELT pipelines (PostgreSQL or Snowflake)
+- Deployment on Streamlit Cloud with usage analytics
 
-- Advisor performance analysis
-
-- Portfolio optimization heuristics
-
-- SQL integration and ELT pipelines
-
-- Deployment on Streamlit Cloud
 
 
 ## About
