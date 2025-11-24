@@ -3,7 +3,12 @@ from __future__ import annotations
 import streamlit as st
 import pandas as pd
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from src.generate_data import generate_synthetic_portfolio
+from src.ai_insights import generate_portfolio_insights
+
 
 
 st.set_page_config(page_title="Wealth AI Dashboard", layout="wide")
@@ -183,7 +188,7 @@ def main() -> None:
 
     st.markdown(f"### {labels['kpi_title']}")
     render_kpis(filtered_df, labels)
-    
+
     render_client_distribution(filtered_df, labels)
 
 
@@ -195,6 +200,13 @@ def main() -> None:
         render_allocation_chart(filtered_df, labels)
     with col2:
         render_risk_return(filtered_df, labels)
+
+    st.markdown("### AI portfolio insights")
+
+    if st.button("Generate insights on filtered portfolio"):
+        with st.spinner("Generating AI commentary on the current selection..."):
+            insights = generate_portfolio_insights(filtered_df, lang_code=lang_code)
+        st.markdown(insights)
 
     with st.expander(labels["raw_data"]):
         st.dataframe(filtered_df, use_container_width=True)

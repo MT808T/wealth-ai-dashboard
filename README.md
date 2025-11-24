@@ -14,7 +14,7 @@ The goal of this project is to demonstrate practical skills aligned with real We
 
 ##  Features
 
-### ✔ Synthetic Portfolio Dataset  
+###  Synthetic Portfolio Dataset  
 Generated programmatically using controlled financial distributions:
 - AUM (CHF)
 - YTD return, volatility, Sharpe ratio  
