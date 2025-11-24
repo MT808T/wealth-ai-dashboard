@@ -52,18 +52,55 @@ All charts and KPIs update dynamically based on the selected filters.
 
 ##  Project Structure
 
+```
 wealth-ai-dashboard/
 │
-├── app.py   # Streamlit frontend
+├── app.py                 # Streamlit frontend
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
 │
 ├── src/
-│ ├── generate_data.py # Synthetic dataset 
-│ ├── viz.py # (future visuals)
-│ ├── ai_insights.py # (future AI insights)
-│ └── init.py
+│   ├── generate_data.py   # Synthetic dataset generator
+│   ├── viz.py             # (future visuals)
+│   ├── ai_insights.py     # (future AI insights)
+│   └── __init__.py
 │
 └── data/
-└── (empty - generated on the fly)
+    └── (empty - generated on the fly)
+```
+
+
+---
+
+##  Installation
+```
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+```
+streamlit run app.py  # to run the app
+```
+
+##  Future Enhancements
+
+The codebase is structured to easily support additional modules:
+
+- AI-based portfolio insights using LLMs
+
+- Portfolio anomaly detection
+
+- Advisor performance analysis
+
+- Portfolio optimization heuristics
+
+- SQL integration and ELT pipelines
+
+- Deployment on Streamlit Cloud
+
+
+## About
+
+This project was developed as part of a Data & AI portfolio focused on Wealth Management analytics.
